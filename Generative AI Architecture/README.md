@@ -131,20 +131,37 @@
     - LLMs are foundation models that use AI in deep learning with vast data sets. They're called large language models
       due to the size of the training data set, which may run into petabytes.
 
-
-
-
 ### Basics of AI Hallucinations
 
-* AI hallucinations refer to an AI model generating output presented as accurate but seen as unrealistic, inaccurate, irrelevant, or nonsensical by humans.
-* AI hallucination can result in the generation of inaccurate information, the creation of biased views, and wrong input provided to sensitive applications.
+* AI hallucinations refer to an AI model generating output presented as accurate but seen as unrealistic, inaccurate,
+  irrelevant, or nonsensical by humans.
+* AI hallucination can result in the generation of inaccurate information, the creation of biased views, and wrong input
+  provided to sensitive applications.
 * You can prevent the problems caused by AI hallucinations through:
-  - Extensive training with high-quality data,
-  - Avoiding manipulation,
-  - Ongoing evaluation and improvement of the models,
-  - Fine-tuning on domain-specific data,
-  - Being vigilant,
-  - Ensuring human oversight, and
-  - Providing additional context in the prompt.
+    - Extensive training with high-quality data,
+    - Avoiding manipulation,
+    - Ongoing evaluation and improvement of the models,
+    - Fine-tuning on domain-specific data,
+    - Being vigilant,
+    - Ensuring human oversight, and
+    - Providing additional context in the prompt.
 
+### Overview of Libraries and Tools
 
+Summary
+
+- There are various libraries and tools that you can use to develop NLP applications using generative AI. Some tools are
+  PyTorch, TensorFlow, Hugging Face, LangChain, and Pydantic.
+- PyTorch is an open source deep learning framework. It is a Python-based library well-known for its ease of use,
+  flexibility, and dynamic computation graphs.
+- TensorFlow is an open-source framework for machine learning and deep learning. It provides tools and libraries to
+  facilitate the development and deployment of machine learning models.
+- The tight integration of TensorFlow with Keras provides a user-friendly high-level neural networks API, facilitating
+  rapid prototyping and building and training deep learning models.
+- Hugging Face is a platform that offers an open-source library with pretrained models and tools to streamline the
+  process of training and fine-tuning generative AI models. It offers libraries such as Transformers, Datasets, and
+  Tokenizers.
+- LangChain is an open-source framework that helps streamline AI application development using LLMs. It provides tools
+  for designing effective prompts.
+- Pydantic is a Python library that helps you streamline data handling. It ensures the accuracy of data types and
+  formats before an application processes them.
