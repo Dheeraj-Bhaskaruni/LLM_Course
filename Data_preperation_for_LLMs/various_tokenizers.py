@@ -131,3 +131,37 @@ print(tokenized_sentence)
 print(token_indices)
 
 
+lines = ["IBM taught me tokenization",
+         "Special tokenizers are ready and they will blow your mind",
+         "just saying hi!"]
+
+
+special_symbols = ['<unk>', '<pad>', '<bos>', '<eos>']
+
+tokenizer_en = get_tokenizer('spacy', language = 'en_core_web_sm')
+
+tokens = []
+
+max_length = 0
+
+for line in lines:
+    tokenized_line = tokenizer_en(line)
+    tokenized_line = ['<bos>'] + tokenized_line + ['<eos>']
+    tokens.append(tokenized_line)
+    max_length = max(max_length, len(tokenized_line))
+
+for i in range(len(tokens)):
+    tokens[i] = tokens[i] + ['<pad>'] * (max_length-len(tokens[i]))
+
+
+print(tokens)
+
+# Build vocabulary without unk_init
+vocab = build_vocab_from_iterator(tokens, specials=['<unk>'])
+vocab.set_default_index(vocab["<unk>"])
+
+# Vocabulary and Token Ids
+print("Vocabulary:", vocab.get_itos())
+print("Token IDs for 'tokenization':", vocab.get_stoi())
+
+
